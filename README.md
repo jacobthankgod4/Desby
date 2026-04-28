@@ -1,2 +1,0 @@
-# Desby
-Fashion Designers OS
