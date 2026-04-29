@@ -1,0 +1,26 @@
+{
+  "buildCommand": "pnpm build",
+  "outputDirectory": "dist/public",
+  "framework": "vite",
+  "nodeVersion": "22.x",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/index.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "functions": {
+    "dist/index.js": {
+      "runtime": "nodejs22.x",
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  }
+}
